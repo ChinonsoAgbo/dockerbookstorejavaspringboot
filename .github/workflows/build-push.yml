@@ -16,7 +16,10 @@ env:
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ secondBranch ]
+  pull_request:
+      branches: [ secondBranch ]
+
   workflow_dispatch:
 
 permissions:
