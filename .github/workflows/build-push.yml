@@ -61,7 +61,7 @@ jobs:
       with:
         image: chinonsoagbo/books
         context: .  # Set the build context to the root of the project
-        dockerfile: ../Dockerfile  # Specify the path to your Dockerfile
+        dockerfile: ./${{ env.COMPONENT }}/Dockerfile  # Specify the path to your Dockerfile
         registry: docker.io
         tags: ${{secrets.DOCKER_USERNAME}}/bookstore-${{ env.COMPONENT }}:${{github.run_number}}
         platforms: linux/amd64,linux/arm64/v8
