@@ -65,4 +65,6 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         platforms: linux/amd64,linux/arm64/v8
         push: true
+        tag: latest  # You can change 'latest' to a specific tag if needed
+
 
