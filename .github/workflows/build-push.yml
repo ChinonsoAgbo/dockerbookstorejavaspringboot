@@ -61,10 +61,8 @@ jobs:
       with:
         image: chinonsoagbo/books
         registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        tags: ${{secrets.DOCKER_USERNAME}}/bookstore-${{ env.COMPONENT }}:${{github.run_number}}
         platforms: linux/amd64,linux/arm64/v8
         push: true
-        tag: latest  # You can change 'latest' to a specific tag if needed
 
 
